@@ -4,9 +4,38 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tailwindcss and password</title>
-	<link rel="stylesheet" href="css/estilos.css">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container"></div>
+	<div class="h-screen flex justify-center items-center">
+	  <div class="w-2/6 p-4 rounded-xl ring ring-black relative">
+	    <header class="flex justify-center relative">
+	      <img src="https://fakeimg.pl/160/" class="rounded-full transform -translate-y-32 absolute ring-4 ring-indigo-500 ring-offset-4">
+	    </header>
+	    <div class="mt-14">
+	      <form>
+	        <div class="mb-6">
+	          <input type="email" placeholder="Email" class="outline-none text-xl focus:ring-2 focus:ring-indigo-500 p-2 w-full">
+	        </div>
+	        <div class="mb-6">
+	          <input type="text" placeholder="User name" class="outline-none text-xl focus:ring-2 focus:ring-indigo-500 p-2 w-full">
+	        </div>
+	        <div class="mb-6">
+	          <input type="password" placeholder="Password" class="outline-none text-xl focus:ring-2 focus:ring-indigo-500 p-2 w-full">
+	        </div>
+	        <div class="mb-6">
+	          <input type="password" placeholder="Repeat Password" class="outline-none text-xl focus:ring-2 focus:ring-indigo-500 p-2 w-full">
+	        </div>
+	        <div class="mb-6">
+	        	<input type="checkbox" id="terminos" class="checked:bg-blue-600 checked:border-transparent">
+	        	<label for="terminos">Acepto los terminos</label>
+	        </div>
+	        <button class="focus:outline-none text-center text-white text-xl w-full p-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-offset-2">Register now</button>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+	<script src="jquery.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 @layer components{
 	.container{
-		@apply mx-auto px-8;
+		@apply h-screen flex justify-center items-center;
 	}
 }
 
