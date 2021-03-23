@@ -1,12 +1,10 @@
-$("button").on("click", (e)=>{
+$("button").click(function (e) {
 	e.preventDefault();
-})
-
-$("button").click(function (argument) {
 	if ($("#email").val() == "" || $("#user").val() == "" || $("#password").val() == "" || $("#repassword").val() == "" || $("#terminos").prop('checked') == false) {
 		$("#alert").removeClass("hidden")
 	}else {
 		$("#alert").addClass("hidden")
+		location.reload();
 	}
 })
 
@@ -30,11 +28,18 @@ $(function(){
 		}
 
 		if (check >= 0 && check <= 2) {
-			$("#password").css("border", "1px solid red");
+			$("#password").removeClass("focus:ring-indigo-500");
+			$("#password").removeClass("focus:ring-yelow-500");
+			$("#password").removeClass("focus:ring-green-500");
+			$("#password").addClass("focus:ring-red-500");
 		}else if (check >= 3 && check <= 4) {
-			$("#password").css("border", "1px solid orange");
+			$("#password").removeClass("focus:ring-red-500");
+			$("#password").removeClass("focus:ring-green-500");
+			$("#password").addClass("focus:ring-yellow-500");
 		}else if (check == 5) {
-			$("#password").css("border", "1px solid green");
+			$("#password").removeClass("focus:ring-yellow-500");
+			$("#password").removeClass("focus:ring-red-500");
+			$("#password").addClass("focus:ring-green-500");
 		}
 	})
 
@@ -43,9 +48,11 @@ $(function(){
 		var pass2 = $("#repassword").val();
 
 		if (passs === pass2) {
-			$("#repassword").css("border", "1px solid green");
+			$("#repassword").addClass("focus:ring-green-500");
 		}else{
-			$("#repassword").css("border", "1px solid red");
+			$("#repassword").removeClass("focus:ring-green-500");
+			$("#repassword").removeClass("focus:ring-indigo-500");
+			$("#repassword").addClass("focus:ring-red-500");
 		}
 
 	})
