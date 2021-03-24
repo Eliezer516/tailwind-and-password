@@ -2,8 +2,11 @@ $("button").click(function (e) {
 	e.preventDefault();
 	if ($("#email").val() == "" || $("#user").val() == "" || $("#password").val() == "" || $("#repassword").val() == "" || $("#terminos").prop('checked') == false) {
 		$("#alert").removeClass("hidden")
+		setTimeout(function(){
+			$("#alert").addClass("hidden")
+		}, 5000)
 	}else {
-		$("#alert").addClass("hidden")
+		// $("#alert").addClass("hidden")
 		location.reload();
 	}
 })
